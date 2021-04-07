@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-navbar >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <font face="Superspace Regular"><b>
+    <ion-title align="center"><h1>TRAT  TRAVEL</h1></ion-title></b></font>
+  </ion-navbar>
+
+  <ion-navbar color="danger">
+       
+    <font face="Superspace Regular"><b>
+        <ion-title align="center"><h5>หน้าแรก</h5></ion-title></b>
+    </font>
+        
+      </ion-navbar>
+
+    <!--ทำไสลด์-->
+    <ion-slides pager>
+        <ion-slide auto>
+            <font face="Superspace Regular">
+                <h1>สถานที่ท่องเที่ยวที่น่าสนใจ</h1></font>
+          <img src="assets/imgs/1.jpg"/>
+        </ion-slide>
+       
+        <ion-slide >
+            <font face="Superspace Regular">
+                <h1>สถานที่ท่องเที่ยวที่น่าสนใจ</h1></font>
+          <img src="assets/imgs/2.jpg"/>
+        </ion-slide>
+       
+        <ion-slide >
+            <font face="Superspace Regular">
+                <h1>สถานที่ท่องเที่ยวที่น่าสนใจ</h1></font>
+          <img src="assets/imgs/3.jpg"/>
+        </ion-slide>
+        
+        <ion-slide >
+            <font face="Superspace Regular">
+                <h1>สถานที่ท่องเที่ยวที่น่าสนใจ</h1></font>
+          <img src="assets/imgs/4.jpg"/>
+        </ion-slide>
+       </ion-slides>
+</ion-header>
+
+<!--ที่พัก/โรงแรมที่น่าสนใจ-->
+<ion-content  padding="true">
+<font face="Superspace Regular" align="center">
+    <h1>ที่พัก/โรงแรมที่น่าสนใจ</h1></font>
+<ion-grid>
+        <ion-row>
+          <ion-col>
+    <ion-card (click)="gostay11(item)">
+        <img src="assets/imgs/t11.jpg"/>
+        <font face="Superspace Regular" align="center">
+          <div class="card-title">Baanmakok <br> (บ้านมะกอก - เกาะกูด)</div>
+        </font>
+     </ion-card>
+    
+          </ion-col>
+
+          <ion-col>
+            <ion-card (click)="gostay12(item)">
+        <img src="assets/imgs/t12.jpg"/>
+        <font face="Superspace Regular" align="center">
+          <div class="card-title">Tinkerbell Privacy Resort<br>(ทิงเกอร์เบลล์ ไพรเวซี่ รีสอร์ท - เกาะกูด) </div>
+        </font>
+     </ion-card>
+    </ion-col>
+        </ion-row>
+
+     <ion-row>
+        <ion-col>
+            <ion-card (click)="gostay5(item)">
+        <img src="assets/imgs/t5.jpg"/>
+        <font face="Superspace Regular" align="center">
+          <div class="card-title">บ้านปู รีสอร์ท</div>
+        </font>
+     </ion-card>
+    </ion-col>
+
+          <ion-col>
+    <ion-card (click)="gostay6(item)">
+        <img src="assets/imgs/t6.jpg"/>
+        <font face="Superspace Regular" align="center">
+          <div class="card-title">โกลเด้น คลิฟฟ์ บีช รีสอร์ท</div>
+        </font>
+     </ion-card>
+          </ion-col></ion-row>
+
+      </ion-grid>
+<!---ของดีเมืองตราด-->
+
+      <font face="Superspace Regular" align="center">
+            <h1>ของดีเมืองตราด</h1></font>
+
+        <ion-grid>
+                <ion-row>
+                  <ion-col> 
+            <ion-card (click)="gogive1(item)">
+                <img src="assets/imgs/101.jpg"/>
+                <font face="Superspace Regular" align="center">
+                  <div class="card-title">สับปะรดตราดสีทอง</div>
+                </font>
+            </ion-card>
+                  </ion-col>
+        
+                  <ion-col>
+                    <ion-card (click)="gogive2(item)">
+                <img src="assets/imgs/7.jpg"/>
+                <font face="Superspace Regular" align="center">
+                  <div class="card-title">พลอยแดงค่าล้ำ</div>
+                </font>
+             </ion-card>
+            </ion-col>
+
+             <ion-col>
+                    <ion-card (click)="gogive3(item)">
+                <img src="assets/imgs/8.jpg"/>
+                <font face="Superspace Regular" align="center">
+                  <div class="card-title">ระกำหวาน</div>                </font>
+             </ion-card>
+            </ion-col>
+                </ion-row>
+
+             <ion-row>
+                  <ion-col>  
+            <ion-card (click)="gogive4(item)" >
+                <img src="assets/imgs/9.jpg"/>
+                <font face="Superspace Regular"align="center">
+                  <div class="card-title">สุนัขพันธุ์ไทยหลังอาน</div>
+                </font>
+             </ion-card>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-card (click)="gogive5(item)">
+                <img src="assets/imgs/105.jpg"/>
+                <font face="Superspace Regular"align="center">
+                  <div class="card-title">งอบน้ำเชี่ยว</div>
+                </font>
+             </ion-card>
+            </ion-col>
+
+            <ion-col>
+              <ion-card (click)="gogive6(item)">
+                <img src="assets/imgs/102.jpg"/>
+                <font face="Superspace Regular"align="center">
+                  <div class="card-title">อาหารทะเล</div>
+                </font>
+              </ion-card>
+            </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-content>
+
+
+

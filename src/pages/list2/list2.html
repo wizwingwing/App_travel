@@ -1,0 +1,163 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <font face="Superspace Regular"><b>
+      <ion-title align="center"><h1>TRAT  TRAVEL</h1></ion-title></b></font>
+    </ion-navbar>
+  
+    <ion-navbar color="danger">
+       
+        <font face="Superspace Regular"><b>
+        <ion-title align="center"><h5>สถานที่ท่องเที่ยว</h5></ion-title></b></font>
+        
+      </ion-navbar>
+
+
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="Group">
+        <ion-segment-button value="newtrip">
+          น่าสนใจ
+        </ion-segment-button>
+        <ion-segment-button value="trip1">
+          เกาะ
+        </ion-segment-button>
+        <ion-segment-button value="trip2">
+          ไม่ข้ามเกาะ
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+    <div [ngSwitch]="Group">
+  <!--สภานที่ท่องเที่ยวที่น่าสนใจ-->
+      <ion-list *ngSwitchCase="'newtrip'">
+        <ion-item (click)="gopage1(item)">
+          <ion-thumbnail item-start>
+          <img src="assets/imgs/1.jpg">
+        </ion-thumbnail>
+        <font face="Superspace Regular">
+        <h1>เกาะช้าง</h1></font>
+      </ion-item>
+  
+      <ion-item (click)="gopage2(item)">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/2.jpg">
+        </ion-thumbnail>
+        <font face="Superspace Regular">
+        <h1>เกาะกูด</h1></font>
+      </ion-item>
+  
+      <ion-item (click)="gopage8(item)">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/3.jpg">
+        </ion-thumbnail>
+        <font face="Superspace Regular">
+        <h1>หาดทรายดำ</h1></font>
+      </ion-item>
+  
+      <ion-item (click)="gopage10(item)">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/4.jpg">
+        </ion-thumbnail>
+        <font face="Superspace Regular">
+        <h1>น้ำตกสะพานหิน</h1></font>
+      </ion-item>
+    </ion-list>
+    <!--สถานที่ท่องเที่ยวตามเกาะ-->
+      <ion-list *ngSwitchCase="'trip1'">
+        <ion-item (click)="gopage1(item)">
+          <ion-thumbnail item-start> 
+            <img src="assets/imgs/01.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>เกาะช้าง (Koh Chang Island)</h2></font>
+        </ion-item>
+  
+        <ion-item (click)="gopage2(item)">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/02.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>เกาะกูด (Koh Kood Island)</h2></font>
+        </ion-item>
+  
+        <ion-item (click)="gopage3(item)" >
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/03.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>เกาะกระดาด (Koh Kradad Island)</h2></font>
+        </ion-item>
+  
+        <ion-item (click)="gopage4(item)">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/04.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>เกาะรัง (Koh Rung Island)</h2></font>
+        </ion-item>
+  
+        <ion-item (click)="gopage5(item)">
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/05.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>เกาะขาม (Koh Kham Island)</h2></font>
+          </ion-item>
+        
+      </ion-list>
+    
+ 
+  <!--สถานที่ท่องเที่ยวบนฝั่ง-->
+
+        <ion-list *ngSwitchCase="'trip2'">
+          <ion-item (click)="gopage6(item)">
+            <ion-thumbnail item-start> 
+              <img src="assets/imgs/001.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>พิพิธภัณฑ์สถานเมืองตราด</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gopage7(item)" >
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/002.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>พระบรมราชานุสาวรีย์รัชกาลที่ 5</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gopage8(item)">
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/003.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>หาดทรายดำ</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gopage9(item)" >
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/004.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>ศูนย์ราชการุณย์สภากาชาดไทย เขาล้าน</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gopage10(item)">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/005.jpg">
+              </ion-thumbnail>
+              <font face="Superspace Regular">
+              <h2>น้ำตกสะพานหิน (Sapan Hin Waterfalls)</h2></font>
+            </ion-item>
+    </ion-list>
+  </div>
+  </ion-content>
+ 
+  
+  
+  
+  

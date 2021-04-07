@@ -1,0 +1,171 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <font face="Superspace Regular"><b>
+      <ion-title align="center"><h1>TRAT  TRAVEL</h1></ion-title></b></font>
+    </ion-navbar>
+  
+    <ion-navbar color="danger">
+      
+      <font face="Superspace Regular"><b>
+        <ion-title align="center"><h5>ที่พัก/โรงแรม</h5></ion-title></b></font>
+       
+      </ion-navbar>
+    
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="Group">
+          <ion-segment-button value="newtrip">
+            น่าสนใจ
+          </ion-segment-button>
+          <ion-segment-button value="trip1">
+            บนเกาะ
+          </ion-segment-button>
+          <ion-segment-button value="trip2">
+            บนฝั่ง
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+      </ion-header>
+    
+      <ion-content>
+      <div [ngSwitch]="Group">
+    <!--ทีพักน่าสนใจ-->
+        <ion-list *ngSwitchCase="'newtrip'">
+          <ion-item (click)="gostay5(item)" >
+            <ion-thumbnail item-start>
+            <img src="assets/imgs/t11.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>Baanmakok <br> (บ้านมะกอก - เกาะกูด)</h2></font>
+        </ion-item>
+    
+        <ion-item (click)="gostay6(item)">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/t12.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>Tinkerbell Privacy Resort<br>(ทิงเกอร์เบลล์ ไพรเวซี่ รีสอร์ท - เกาะกูด) </h2></font>
+        </ion-item>
+    
+        <ion-item (click)="gostay11(item)">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/t5.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>บ้านปู รีสอร์ท</h2></font>
+        </ion-item>
+    
+        <ion-item (click)="gostay12(item)">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/t6.jpg">
+          </ion-thumbnail>
+          <font face="Superspace Regular">
+          <h2>โกลเด้น คลิฟฟ์ บีช รีสอร์ท</h2></font>
+        </ion-item>
+      </ion-list>
+      <!--ที่พักบนเกาะ-->
+        <ion-list *ngSwitchCase="'trip1'">
+            <ion-item (click)="gostay1(item)">
+                <ion-thumbnail item-start> 
+                  <img src="assets/imgs/t7.jpg">
+                </ion-thumbnail>
+                <font face="Superspace Regular">
+                <h2>The Emerald Cove Koh Chang<br> (ดิ เอเมอรัล โคฟ เกาะช้าง)</h2></font>
+              </ion-item>
+
+          <ion-item (click)="gostay2(item)">
+            <ion-thumbnail item-start> 
+              <img src="assets/imgs/t8.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>Awa Resort Koh Chang <br>(เอวา รีสอร์ท เกาะช้าง)</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gostay3(item)" >
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/t9.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>The Dewa Koh Chang<br> (เดอะ เดวา เกาะช้าง)</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gostay4(item)">
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/t10.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>Captain Hook Resort <br> (กัปตันฮุก รีสอร์ท - เกาะกูด)</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gostay5(item)">
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/t11.jpg">
+            </ion-thumbnail>
+            <font face="Superspace Regular">
+            <h2>Baanmakok <br> (บ้านมะกอก - เกาะกูด)</h2></font>
+          </ion-item>
+    
+          <ion-item (click)="gostay6(item)" >
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/t12.jpg">
+              </ion-thumbnail>
+              <font face="Superspace Regular">
+              <h2>Tinkerbell Privacy Resort<br>(ทิงเกอร์เบลล์ ไพรเวซี่ รีสอร์ท - เกาะกูด) </h2></font>
+            </ion-item>
+          
+        </ion-list>
+      
+   
+    <!--ที่พักบนฝั่ง-->
+  
+          <ion-list *ngSwitchCase="'trip2'">
+            <ion-item (click)="gostay7(item)">
+              <ion-thumbnail item-start> 
+                <img src="assets/imgs/t1.jpg">
+              </ion-thumbnail>
+              <font face="Superspace Regular">
+              <h2>ตราด ซิตี้ โฮเต็ล</h2></font>
+            </ion-item>
+      
+            <ion-item (click)="gostay8(item)">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/t2.jpg">
+              </ion-thumbnail>
+              <font face="Superspace Regular">
+              <h2>โฮเทล ทอสคาน่า ตราด</h2></font>
+            </ion-item>
+      
+            <ion-item (click)="gostay9(item)">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/t3.jpg">
+              </ion-thumbnail>
+              <font face="Superspace Regular">
+              <h2>ชีวาปุรี เรสซิเดนซ์</h2></font>
+            </ion-item>
+      
+            <ion-item (click)="gostay10(item)">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/t4.jpg">
+              </ion-thumbnail>
+              <font face="Superspace Regular">
+              <h2>เอวาด้า โฮเทล</h2></font>
+            </ion-item>
+      
+            <ion-item (click)="gostay11(item)">
+                <ion-thumbnail item-start>
+                  <img src="assets/imgs/t5.jpg">
+                </ion-thumbnail>
+                <font face="Superspace Regular">
+                <h2>บ้านปู รีสอร์ท</h2></font>
+              </ion-item>
+
+              <ion-item (click)="gostay12(item)">
+                  <ion-thumbnail item-start>
+                    <img src="assets/imgs/t6.jpg">
+                  </ion-thumbnail>
+                  <font face="Superspace Regular">
+                  <h2>โกลเด้น คลิฟฟ์ บีช รีสอร์ท</h2></font>
+                </ion-item>
+    
